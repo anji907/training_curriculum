@@ -27,6 +27,7 @@ class CalendarsController < ApplicationController
 
     @week_days = []
 
+    #今日から一週間分の日付と予定をPlanモデルから取得
     plans = Plan.where(date: @todays_date..@todays_date + 6)
 
     7.times do |x|
